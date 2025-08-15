@@ -1,4 +1,4 @@
-name: onboarding
+name: development
 channels:
   - conda-forge
 dependencies:

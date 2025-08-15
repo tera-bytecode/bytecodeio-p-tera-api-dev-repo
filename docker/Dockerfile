@@ -16,12 +16,10 @@ RUN mamba env update -f environment.yaml -n base && mamba clean -y --all
 
 RUN pip install --upgrade pip && \
     pip install --upgrade oauth2client && \
-    pip install keyrings.google-artifactregistry-auth && \
-    pip install autopep8 && \
-    pip install --index-url https://us-east1-python.pkg.dev/mercari-us-boston-ml/mercari-us-boston-de/simple/ us-de-common
-
-RUN mkdir de_onboarding
-COPY de_onboarding de_onboarding
+    pip install keyrings.google-artifactregistry-auth
+    
+RUN mkdir src
+COPY src src
 
 ARG ENVIRONMENT
 ENV ENVIRONMENT=${ENVIRONMENT}
