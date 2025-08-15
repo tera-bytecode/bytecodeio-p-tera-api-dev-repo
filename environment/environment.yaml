@@ -1,0 +1,8 @@
+name: onboarding
+channels:
+  - conda-forge
+dependencies:
+  - pip:
+      - pandas 
+      - requests
+      - openai
