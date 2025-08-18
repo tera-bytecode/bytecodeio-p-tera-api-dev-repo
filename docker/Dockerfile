@@ -18,8 +18,8 @@ RUN pip install --upgrade pip && \
     pip install --upgrade oauth2client && \
     pip install keyrings.google-artifactregistry-auth
     
-RUN mkdir src
-COPY src src
+RUN mkdir source
+COPY source source
 
 ARG ENVIRONMENT
 ENV ENVIRONMENT=${ENVIRONMENT}
